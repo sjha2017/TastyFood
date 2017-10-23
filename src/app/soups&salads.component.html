@@ -1,0 +1,31 @@
+<!-- <div [showComponent]='false'> -->
+<div class="Menu">
+    <div class="col-md-8 container-fluid">
+        <div class="col-md-6 container" *ngFor= "let menu of listofmenu">
+            <div class="table-responsive">
+                <table class="table table-hover" style="background-color:white">
+                    <thead>
+                        <tr>
+                            <th>{{menu.name}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src= {{menu.image}} class="img-thumbnail" alt="Cinque Terre"></td>
+                            <td>
+                                <span class="fa fa-inr"></span>{{menu.price}}
+                                <br/> <br/>
+                                <span class="glyphicon glyphicon-heart-empty"></span>Add to fav
+                                <br/> <br/>
+                                <span class="glyphicon glyphicon-thumbs-up"></span>Like
+                                <br/> <br/>
+                                <span class="glyphicon glyphicon-shopping-cart"></span>Add to cart
+                                <br/> <br/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

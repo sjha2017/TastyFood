@@ -1,0 +1,76 @@
+<div class="col-md-4 container-fluid" style="background-color: rgba(128, 41, 0, 0.93)">
+    <div class="panel-group" id="menu" style="background-color: #805E00">
+        <div class="panel panel-default" style="background-color: rgba(255, 230, 102, 0.73)">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#menu" href="#menu1">MENU</a>
+                </h4>
+            </div>
+            <div id="menu1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown" id="button">Veg
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu nav nav-pills nav-stacked option">
+                                    <li *ngFor="let list of listofOptions">
+                                        <a routerLink="/{{list.href}}">{{list.menu}}</a>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown" id="button">Non - Veg
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu nav nav-pills nav-stacked option_nonVeg">
+                                    <li *ngFor="let list of listofnon_veg">
+                                        <a routerLink="/{{list.href}}">{{list.menu}}</a>
+                                    </li>
+                                </ul>        
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown" id="button">Desserts and Beverages
+                                <span class="caret"></span></button>
+                                <ul class="dropdown-menu nav nav-pills nav-stacked dessert">
+                                    <li *ngFor="let list of listofDesserts">
+                                        <a href="/{{list.href}}">{{list.menu}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default" style="background-color: rgba(255, 230, 102, 0.73)">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#menu" href="#menu2">Dine out</a>
+                </h4>
+            </div>
+            <div id="menu2" class="panel-collapse collapse">
+                <div class="panel-body dineout">
+                    <button type="button" class="btn btn-primary btn-block" id="button" *ngFor="let list of listofDineouts">{{list.dine}}</button>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default" style="background-color: rgba(255, 230, 102, 0.73)">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#menu" href="#menu3">Location</a>
+                </h4>
+            </div>
+            <div id="menu3" class="panel-collapse collapse">
+                <div class="panel-body location">
+                    <button type="button" class="btn btn-primary btn-block" id="button" *ngFor="let list of listofLocations">{{list.city}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+.dropdown, .dropup 
+{
+        position: relative;
+        margin-top: 22px;
+}
+
+.title
+{
+    position: relative;
+}
+
+.menu
+{
+    background-color: #805700;
+}
+
+a
+{
+    color:black;
+    font-size: 18px; 
+}
+
+h1
+{
+    font-weight: bold;
+    font-size: 60px; 
+}
+
+h2
+{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+p.thick {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+p.small
+{
+    font-weight: 700;
+    font-size: 15px;
+}
+
+#grad
+{
+    background: linear-gradient(to right, #802900, #FFE866 );
+}
+
+#footer
+{
+   /*  height: 100%; */
+    width:100%;
+   /*  position: fixed; */
+    bottom: 0px;
+}
+
+.container-fluid
+{
+    margin-top: 50px;
+}
+
+.img-thumbnail
+{
+    height: 200px;
+}
+
+#button
+{
+    background-color: rgba(0, 4, 255, 0.6);
+}
+
+#myCarousel {
+    display:none;   
+}
+
